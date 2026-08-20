@@ -77,12 +77,6 @@ code {
     height: 60px;
     padding: 5px 16px 0;
   }
-
-  /* ensure there is visible space at bottom on small screens (accounts for home indicators)
-     and avoid content being clipped behind mobile UI */
-  .Home {
-    padding-bottom: calc(60px + env(safe-area-inset-bottom));
-  }
 }
 
 .Home_headerFirstContainer {
@@ -179,24 +173,24 @@ code {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 10px;
-  padding: 20px 0 10px;
+  padding: 10px 0 10px;
   text-decoration: none;
 }
 
 .Home_contentTitle {
-  font-size: 15px;
-  font-weight: 700;
-  margin: 10px 10px 6px;
+  font-size: 12px;
+  font-weight: 650;
+  margin: 6px 6px 6px;
 }
 
 .Home_contentBtn > img {
-  max-height: 40px;
-  max-width: 40px;
+  max-height: 34px;
+  max-width: 34px;
 }
 
 .Home_contentBtn > span {
   color: #000;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   margin-top: 10px;
 }
@@ -727,14 +721,16 @@ code {
   display: flex;
   justify-content: space-around;
   padding: 8% 10%;
+  box-shadow: none;
 }
 
 .Home_credcheck_container > div > p {
-  font-weight: 700;
+  font-weight: 650;
+  font-size: 14px;
 }
 
 .Home_credcheck_container > div > img {
-  width: 20%;
+  width: 22%;
 }
 
 .Home_copyLinkButton {
@@ -1107,13 +1103,20 @@ body {
 /* Contenedor horizontal con snap scroll */
 .PromoCarousel {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   overflow-x: auto;
-  padding: 12px 16px 24px;
+  padding: 18px 16px 24px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
+}
+
+@media (max-width: 420px) {
+  .PromoCarousel {
+    padding-bottom: 8px; /* Reduces the bottom gap from 24px to 8px */
+    margin-bottom: 0px;
+  }
 }
 
 .PromoCarousel::-webkit-scrollbar {
