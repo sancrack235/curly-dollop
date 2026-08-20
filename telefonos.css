@@ -1,0 +1,251 @@
+:root {
+  --primary-color: #2f36bd;
+  --bg-color: #f5f5f5;
+  --text-color: #1b1b1b;
+  --border-color: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  justify-content: center;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.masterContainer {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+}
+
+.Telefonos {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  padding-bottom: calc(75px + env(safe-area-inset-bottom));
+}
+
+/* ==========================================
+   HEADER STYLES (Synchronized with index.css)
+   ========================================== */
+.Home_headerContainer {
+  align-items: center;
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  justify-content: flex-start;
+  padding: 5px 23px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  align-self: flex-start;
+}
+
+@media (max-width: 420px) {
+  .Home_headerContainer {
+    height: 60px;
+    padding: 5px 16px 0;
+  }
+}
+
+.Home_headerFirstContainer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Menu Icon Wrapper & SVG Constraints */
+.Home_headerMenuIcon {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  justify-content: flex-start;
+  width: 46px; /* Balances the 46px profile image so logo centers */
+}
+
+.Home_headerMenuIcon svg {
+  display: block;
+  height: 24px;
+  width: 24px;
+}
+
+/* Logo Sizing (Supports both class naming conventions) */
+.Home_headerTitle {
+  align-items: center;
+  display: flex;
+}
+
+.Home_headerTitleMi,
+.logo_mi {
+  color: #5e94d1;
+  font-size: 25px;
+  font-weight: 600;
+  margin-right: 0px;
+  vertical-align: baseline;
+}
+
+.Home_headerTitleArg,
+.logo_arg {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 550;
+  margin-left: 0;
+  vertical-align: baseline;
+  letter-spacing: -0.3px;
+}
+
+/* Profile Picture Sizing */
+.Home_profilePic {
+  width: 46px;
+}
+
+.Home_profilePic > img {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+}
+
+/* ==========================================
+   PHONE CARDS
+   ========================================== */
+/* Contenedor principal de la lista */
+.Telefonos_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+/* Tarjeta de teléfono */
+.PhoneCard {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  height: 74px;
+  padding: 0 16px;
+  text-decoration: none;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.PhoneCard:active {
+  background-color: #f8f9fa;
+  transform: scale(0.98);
+}
+
+/* Número telefónico */
+.PhoneCard_number {
+  color: var(--primary-color, #2f36bd);
+  font-size: 30px;
+  font-weight: 650;
+  letter-spacing: -0.5px;
+  text-align: center;
+  width: 70px; /* Ancho fijo para mantener alineada la barra separadora */
+  flex-shrink: 0;
+}
+
+/* Línea divisora vertical */
+.PhoneCard_divider {
+  background-color: #e0e0e0;
+  height: 38px;
+  margin: 0 16px;
+  width: 1px;
+  flex-shrink: 0;
+}
+
+/* Etiqueta del servicio */
+.PhoneCard_label {
+  color: #1a1a1a;
+  flex: 1;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Ícono de teléfono */
+.PhoneCard_icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.PhoneCard_icon svg {
+  fill: #8e8e93;
+  height: 20px;
+  width: 20px;
+}
+
+/* ==========================================
+   BOTTOM NAVIGATION
+   ========================================== */
+.BottomNav {
+  align-items: center;
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-color);
+  bottom: 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  height: calc(58px + env(safe-area-inset-bottom));
+  justify-content: space-around;
+  left: 50%;
+  max-width: 700px;
+  padding-bottom: env(safe-area-inset-bottom);
+  position: fixed;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 200;
+}
+
+.BottomNav_item {
+  align-items: center;
+  color: #757575;
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  font-weight: 500;
+  gap: 2px;
+  justify-content: center;
+  text-decoration: none;
+  width: 25%;
+}
+
+.BottomNav_item > svg {
+  fill: #757575;
+}
+
+.BottomNav_item--active {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.BottomNav_item--active > svg {
+  fill: var(--primary-color);
+}
