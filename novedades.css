@@ -44,6 +44,34 @@ body {
   padding-bottom: calc(75px + env(safe-area-inset-bottom));
 }
 
+/* ==========================================================================
+   Sticky Top Header
+   ========================================================================== */
+.TopHeader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #372fc2;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+}
+
+.TopHeader_back {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.TopHeader_title {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
 /* ==========================================
    HEADER STYLES (Synchronized with index.css)
    ========================================== */

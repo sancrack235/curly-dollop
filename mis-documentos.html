@@ -41,7 +41,7 @@
       content="black-translucent"
     />
 
-    <!-- Color de fondo mientras carga (splash screen improvisado) -->
+    <!-- Color de fondo mientras carga -->
     <style>
       @media (prefers-color-scheme: light) {
         body {
@@ -64,33 +64,41 @@
           "
         >
           <div class="Docs">
-            <header class="Docs_headerContainer">
-              <div class="Docs_headerButtons">
-                <a href="index.html" class="Docs_headerOps unstylebutton" data-transition="reverse">
-                  <svg
-                    version="1.1"
-                    id="Capa_1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="23px"
-                    height="23px"
-                    viewBox="0 0 400.004 400.004"
-                    xml:space="preserve"
-                    fill="white"
-                  >
-                    <g>
-                      <path
-                        d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315C400.004,190.438,392.251,182.686,382.688,182.686z"
-                      ></path>
-                    </g>
-                  </svg>
-                </a>
-                <div class="Docs_headerTitle">
-                  <span class="Docs_headerTitleMi">Documentos</span>
-                </div>
-              </div>
+            <header class="TopHeader">
+              <a
+                href="index.html"
+                class="TopHeader_back"
+                aria-label="Volver"
+                data-transition="reverse"
+              >
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="#ffffff">
+                  <path
+                    d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                  />
+                </svg>
+              </a>
+              <h1 class="TopHeader_title">Documentos</h1>
+              <a
+                href="javascript:location.reload()"
+                class="TopHeader_reload"
+                aria-label="Recargar"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21.5 2v6h-6"></path>
+                  <path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                </svg>
+              </a>
             </header>
+
             <div class="Docs_content">
               <div class="Docs_contentCard">
                 <div class="Docs_contentCardFirst">
@@ -102,168 +110,115 @@
                   </div>
                   <div class="Docs_contentCardDownArrowSVG">
                     <svg
-                      version="1.1"
-                      id="Capa_1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
-                      width="15px"
-                      viewBox="0 0 25.93 25.93"
-                      xml:space="preserve"
-                      fill="#565656"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#4a4a4a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
                     >
-                      <g>
-                        <g id="c118_triangle">
-                          <path
-                            d="M25.397,4.554h-2.042l-9.974,12.644c-0.101,0.124-0.256,0.197-0.416,0.197c-0.164,0-0.315-0.073-0.419-0.197L2.575,4.554H0.532c-0.206,0-0.392,0.115-0.479,0.299c-0.09,0.184-0.064,0.403,0.06,0.561l12.435,15.762c0.104,0.125,0.255,0.2,0.419,0.2c0.16,0,0.315-0.075,0.416-0.2L25.816,5.413c0.128-0.157,0.148-0.377,0.058-0.561C25.789,4.669,25.601,4.554,25.397,4.554z"
-                          ></path>
-                        </g>
-                        <g id="Capa_1_184_"></g>
-                      </g>
+                      <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                   </div>
                   <div class="Docs_contentCardFirstBtn"></div>
                 </div>
+
+                <!-- Updated Dropdown Content -->
                 <div class="Docs_contentOpen">
-                  <div
-                    class="Docs_contentOpenInfoContainer"
-                    style="border-bottom: none; padding-bottom: 0px"
-                  >
-                    <div class="Docs_contentOpenInfo">
-                      <div
-                        class="Docs_contentOpenInfo2"
-                        style="margin-top: 0px"
-                      >
-                        <div>
-                          <span class="Docs_contentOpenInfoTitle"
-                            >Documento</span
-                          >
-                          <span
-                            class="Docs_contentOpenInfoInfo DocumentoMisDocs"
-                            >46172062</span
-                          >
-                        </div>
-                        <div>
-                          <span class="Docs_contentOpenInfoTitle"
-                            >Fecha de vencimiento</span
-                          >
-                          <span
-                            class="Docs_contentOpenInfoInfo FechaVencimientoMisDocs"
-                            >-</span
-                          >
-                        </div>
-                      </div>
-                      <div class="Docs_contentOpenInfo2">
-                        <div>
-                          <span class="Docs_contentOpenInfoTitle">Nombre</span>
-                          <span class="Docs_contentOpenInfoInfo NombreMisDocs"
-                            >NOMBRE</span
-                          >
-                        </div>
-                        <div>
-                          <span class="Docs_contentOpenInfoTitle"
-                            >Apellido</span
-                          >
-                          <span class="Docs_contentOpenInfoInfo ApellidoMisDocs"
-                            >APELLIDO</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <a href="pin.html" class="unstylebutton Docs_contentOpenBtn"
-                      >Ver DNI Digital</a
+                  <!-- Ver DNI Digital Primary Action -->
+                  <div class="Docs_section">
+                    <a href="dni-digital.html" class="Docs_btnPrimary"
+                      >Ver DNI digital</a
                     >
                   </div>
-                </div>
-              </div>
-              <div class="Docs_contentCard">
-                <div class="Docs_contentCardFirst">
-                  <div class="Docs_contentCardSVG">
-                    <img
-                      src="imgs/iconos/13.jpeg"
-                      width="50px"
-                      alt="licenseSVG"
-                    />
+
+                  <!-- RENAPER Info Section -->
+                  <div class="Docs_section Docs_borderTop">
+                    <p class="Docs_infoLabel">Datos suministrados por</p>
+                    <p class="Docs_infoValue">RENAPER</p>
                   </div>
-                  <div class="Docs_contentCardTitle">
-                    <span>Licencia Nacional de Conducir</span>
+
+                  <!-- Solicitar DNI Section -->
+                  <div class="Docs_section Docs_borderTop">
+                    <p class="Docs_descriptionText">
+                      Recordá que podés solicitar el DNI para vos y para tus
+                      hijos y tenerlo disponible en la App.
+                    </p>
+                    <a href="#" class="Docs_btnSecondary"
+                      >Solicitar DNI Digital</a
+                    >
                   </div>
-                  <div class="Docs_contentCardDownArrowSVG">
+
+                  <!-- Device Change Link -->
+                  <div class="Docs_section Docs_borderTop Docs_footerLink">
                     <svg
-                      version="1.1"
-                      id="Capa_1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
-                      width="15px"
-                      viewBox="0 0 25.93 25.93"
-                      xml:space="preserve"
-                      fill="#565656"
+                      class="Docs_infoIcon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#3225c4"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
                     >
-                      <g>
-                        <g id="c118_triangle">
-                          <path
-                            d="M25.397,4.554h-2.042l-9.974,12.644c-0.101,0.124-0.256,0.197-0.416,0.197c-0.164,0-0.315-0.073-0.419-0.197L2.575,4.554H0.532c-0.206,0-0.392,0.115-0.479,0.299c-0.09,0.184-0.064,0.403,0.06,0.561l12.435,15.762c0.104,0.125,0.255,0.2,0.419,0.2c0.16,0,0.315-0.075,0.416-0.2L25.816,5.413c0.128-0.157,0.148-0.377,0.058-0.561C25.789,4.669,25.601,4.554,25.397,4.554z"
-                          ></path>
-                        </g>
-                        <g id="Capa_1_184_"></g>
-                      </g>
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
                     </svg>
-                  </div>
-                  <div class="Docs_contentCardFirstBtn"></div>
-                </div>
-                <div class="Docs_contentOpen" style="padding: 0px">
-                  <div
-                    class="Docs_contentOpenInfoContainer"
-                    style="border-bottom: none; padding-bottom: 0px"
-                  >
-                    <div class="Docs_licenseFirstAd">
-                      <p>
-                        Si te <b> retuvieron o inhabilitaron </b>la licencia
-                        física,
-                        <b> no podés circular con la licencia digital. </b
-                        >Hacerlo constituye un delito.
-                      </p>
-                    </div>
-                    <div class="Docs_licenseContentOpenInfo">
-                      <span class="UltimaAct"></span>
-                      <img
-                        src="imgs/license_qr.a3f4b118b35d2ca4bf78.webp"
-                        alt="licenseQR"
-                        class="Docs_licenseQR"
-                      />
-                      <div class="Docs_licenseStateContent">
-                        <div>
-                          <span>Estado</span>
-                          <b>
-                            <span class="Docs_licenseVigenteCircle"></span
-                            >Vigente
-                          </b>
-                        </div>
-                        <div>
-                          <span>Fecha de vencimiento</span>
-                          <b>20/05/2025</b>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="Docs_licenseBtnContainer">
-                      <span>Ministerio de Transporte</span>
-                      <button
-                        to="/pincode"
-                        class="unstylebutton Docs_contentOpenBtn"
-                      >
-                        Ver mi licencia
-                      </button>
-                    </div>
-                    <div class="Docs_licenseBottom">
-                      Si los datos y/o vigencia de tu licencia están
-                      desactualizados <span> solicitá la rectificación </span>a
-                      la Agencia Nacional de Seguridad Vial.
-                    </div>
+                    <span>Cambié o voy a cambiar el dispositivo</span>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- Bottom Navigation -->
+            <nav class="BottomNav">
+              <a
+                class="BottomNav_item BottomNav_item--active"
+                href="index.html"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="26"
+                  height="26"
+                  fill="currentColor"
+                >
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                </svg>
+                <span>Inicio</span>
+              </a>
+              <a class="BottomNav_item" href="novedades.html">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="26"
+                  height="26"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                  />
+                </svg>
+                <span>Novedades</span>
+              </a>
+              <a class="BottomNav_item" href="telefonos.html">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="26"
+                  height="26"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  />
+                </svg>
+                <span>Teléfonos</span>
+              </a>
+              <a class="BottomNav_item" href="https://wa.link/cnz93b">
+                <img src="icons/tina.png" alt="Tina" width="26" height="26" />
+                <span>Tina</span>
+              </a>
+            </nav>
           </div>
         </div>
       </div>

@@ -673,3 +673,95 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    function formatProperCase(str) {
+        if (!str) return '';
+        return str.trim().toLowerCase().split(/\s+/).map(word => 
+            word.charAt(0).toUpperCase() + word.slice(1)
+        ).join(' ');
+    }
+
+    function calculateCUIL(dni, sex) {
+        if (!dni) return '20-00000000-0';
+        const cleanDni = dni.padStart(8, '0');
+        let prefix = sex === 'F' ? '27' : '20';
+        const weights = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2];
+
+        let base = prefix + cleanDni;
+        let sum = 0;
+        for (let i = 0; i < 10; i++) {
+            sum += parseInt(base[i], 10) * weights[i];
+        }
+
+        let mod = sum % 11;
+        let z = 0;
+        if (mod === 0) {
+            z = 0;
+        } else if (mod === 1) {
+            prefix = '23';
+            z = sex === 'F' ? 4 : 9;
+        } else {
+            z = 11 - mod;
+        }
+
+        return `${prefix}-${cleanDni}-${z}`;
+    }
+
+    function formatSimpleDate(dateStr) {
+        if (!dateStr || !dateStr.includes('-')) return '--';
+        const [year, month, day] = dateStr.split('-');
+        return `${day}/${month}/${year}`;
+    }
+
+    function setElementText(id, text) {
+        const elem = document.getElementById(id);
+        if (elem) elem.textContent = text;
+    }
+
+    function updateProfileHeader() {
+        const rawFormData = localStorage.getItem('dniFormData') || localStorage.getItem('dniNameData');
+        const rawDates = localStorage.getItem('dniDates');
+        const domicilioRaw = localStorage.getItem('dniDomicilio') || '';
+        const dniNumber = localStorage.getItem('dniNumber') || '';
+        const sex = localStorage.getItem('dniSex') || 'M';
+
+        let formData = {};
+        let datesData = {};
+
+        try { if (rawFormData) formData = JSON.parse(rawFormData); } catch (e) {}
+        try { if (rawDates) datesData = JSON.parse(rawDates); } catch (e) {}
+
+        const name = formData.name || '';
+        const surname = formData.surname || '';
+
+        // Header (Nombre + CUIL)
+        if (name || surname) {
+            setElementText('userName', formatProperCase(`${name} ${surname}`));
+        }
+        if (dniNumber) {
+            setElementText('userCuil', `CUIL: ${calculateCUIL(dniNumber, sex)}`);
+        }
+
+        // Domicilio actual
+        if (domicilioRaw) {
+            const parts = domicilioRaw.split(' - ').map(p => p.trim());
+            setElementText('profileStreet', formatProperCase(parts[0] || '--'));
+        }
+
+        // Grilla de datos personales
+        setElementText('profileFirstName', formatProperCase(name) || '--');
+        setElementText('profileLastName', formatProperCase(surname) || '--');
+        setElementText('profileDni', dniNumber ? Number(dniNumber).toLocaleString('es-AR') : '--');
+        setElementText('profileGender', sex === 'M' ? 'Masculino' : sex === 'F' ? 'Femenino' : '--');
+        setElementText('profileBirthDate', formatSimpleDate(datesData.birthDate));
+    }
+
+    updateProfileHeader();
+
+    window.addEventListener('storage', function(e) {
+        if (['dniFormData', 'dniNameData', 'dniDates', 'dniDomicilio', 'dniNumber', 'dniSex'].includes(e.key)) {
+            updateProfileHeader();
+        }
+    });
+});

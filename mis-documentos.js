@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
         if (!isActive) {
           // Activar
+          card.classList.add('open');
           btn.style.borderBottom = '1px solid rgb(148, 148, 148)';
           btn.style.borderTop = 'none';
           btn.style.borderRight = 'none';
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
           isActive = true;
         } else {
           // Desactivar
+          card.classList.remove('open');
           btn.style.border = 'none';
           btn.style.borderImage = 'initial';
   

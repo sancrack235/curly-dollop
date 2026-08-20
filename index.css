@@ -4,6 +4,13 @@
   --text-color: #333;
 }
 
+/* Disable all CSS transitions and animations on flagged pages */
+body[data-transition="none"] *,
+[data-transition="none"] {
+  transition: none !important;
+  animation: none !important;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -104,7 +111,7 @@ code {
   width: 46px;
 }
 
-.Home_profilePic > img {
+.Home_profilePic > a > img {
   display: block;
   object-fit: contain;
   width: 100%;
