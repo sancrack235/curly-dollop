@@ -1,0 +1,269 @@
+/* ==========================================================================
+   Base Resets & Global Page Layout
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+.ProfilePage {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f2f4f7;
+  padding-bottom: 90px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Sticky Top Header
+   ========================================================================== */
+.TopHeader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #372fc2;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+}
+
+.TopHeader_back {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.TopHeader_title {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Profile Hero Banner (Avatar & Details)
+   ========================================================================== */
+.ProfileHero {
+  background-color: #372fc2;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 16px 20px 20px;
+}
+
+.ProfileUser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ProfileUser_avatar {
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.ProfileUser_avatar > img {
+    max-block-size: 100%;
+}
+
+.ProfileUser_nameRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ProfileUser_name {
+  font-size: 21px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.2px;
+  white-space: nowrap
+}
+
+.ProfileUser_checkBadge {
+  background-color: #ffffff;
+  color: #372fc2;
+  font-size: 11px;
+  font-weight: 900;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ProfileUser_cuil {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 6px 0 4px;
+  opacity: 0.95;
+}
+
+.ProfileUser_status {
+  font-size: 11px;
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   Content Sections & Cards
+   ========================================================================== */
+.ProfileContent {
+  padding: 20px 16px;
+}
+
+.ProfileSection {
+  margin-bottom: 24px;
+}
+
+.ProfileSection_title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3f3f3f;
+  margin: 0 0 10px 4px;
+}
+
+.ProfileCard {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ProfileCard--row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ProfileCard_divider {
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 16px 0;
+}
+
+/* ==========================================================================
+   Fields, Badges & Grid
+   ========================================================================== */
+.ProfileField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ProfileField_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.ProfileField_labelRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.ProfileField_label {
+  font-size: 11px;
+  color: #757575;
+  font-weight: 500;
+}
+
+.ProfileField_value {
+  font-size: 13px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.ProfileField_editBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.ProfileBadge--verified {
+  background-color: #32ba6d;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.ProfileAddress_line {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 2px;
+}
+
+.ProfileAddress_sub {
+  font-size: 13px;
+  color: #757575;
+  margin: 8px 0 0;
+  line-height: 1.35;
+}
+
+.ProfileGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 14px;
+}
+
+.ProfileGrid_item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* ==========================================
+   BOTTOM NAVIGATION
+   ========================================== */
+.BottomNav {
+  align-items: center;
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-color);
+  bottom: 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  height: calc(58px + env(safe-area-inset-bottom));
+  justify-content: space-around;
+  left: 50%;
+  max-width: 700px;
+  padding-bottom: env(safe-area-inset-bottom);
+  position: fixed;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 200;
+}
+
+.BottomNav_item {
+  align-items: center;
+  color: #757575;
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  font-weight: 500;
+  gap: 2px;
+  justify-content: center;
+  text-decoration: none;
+  width: 25%;
+}
+
+.BottomNav_item > svg {
+  fill: #757575;
+}

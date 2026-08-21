@@ -1,0 +1,186 @@
+/* ==========================================================================
+   Base Resets & Global Page Layout
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+.ProfilePage {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f2f4f7;
+  padding-bottom: 90px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Sticky Top Header
+   ========================================================================== */
+.TopHeader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #372fc2;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+}
+
+.TopHeader_back {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.TopHeader_title {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.TopHeader_reload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/* Contenedor Principal */
+.vehiculosContent {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Banner DNRPA (Azul claro) */
+.InfoBanner {
+  background-color: #a7cbe5;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.InfoBanner_text {
+  margin: 0;
+  color: #1e293b;
+  font-size: 13.5px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.InfoBanner_link {
+  color: #2528a6;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.InfoBanner_badge {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.InfoBanner_badge > img {
+    max-block-size: 100%;
+}
+
+
+
+.InfoBanner_icon {
+  width: 100%;
+  height: 100%;
+}
+
+/* Tarjeta Agregá Servicios */
+.ServiceCard {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 20px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.ServiceCard_title {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ServiceCard_text {
+  margin: 0 0 18px 0;
+  font-size: 13.5px;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.ServiceCard_button {
+  width: 100%;
+  background-color: #372fc2;
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+
+.ServiceCard_button:active {
+  opacity: 0.9;
+}
+
+/* ==========================================
+   BOTTOM NAVIGATION
+   ========================================== */
+
+.BottomNav {
+  align-items: center;
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-color);
+  bottom: 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  height: calc(58px + env(safe-area-inset-bottom));
+  justify-content: space-around;
+  left: 50%;
+  max-width: 700px;
+  padding-bottom: env(safe-area-inset-bottom);
+  position: fixed;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 200;
+}
+
+.BottomNav_item {
+  align-items: center;
+  color: #757575;
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  font-weight: 500;
+  gap: 2px;
+  justify-content: center;
+  text-decoration: none;
+  width: 25%;
+}
+
+.BottomNav_item > svg {
+  fill: #757575;
+}

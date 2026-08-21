@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú - miArgentina</title>
+
+    <!-- Google Fonts: Encode Sans & Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="datos.js" defer></script>
+    <script src="datos1.js" defer></script>
+    <link rel="stylesheet" href="hamburger.css" />
+  </head>
+  <body class="menu-page">
+    <div class="menu-wrapper">
+      <!-- Sticky Top Header -->
+      <header class="top-header">
+        <a href="index.html" class="top-header__back" aria-label="Volver">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+            <path
+              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+            />
+          </svg>
+        </a>
+        <div class="top-header__logo">
+          <span class="top-header__logo-mi">mi</span>
+          <span class="top-header__logo-arg">Argentina</span>
+        </div>
+      </header>
+
+      <!-- User Profile Header (Dynamic Placeholders) -->
+      <section class="profile-header">
+        <div class="profile-header__avatar-wrapper">
+          <div class="profile-header__avatar">
+            <img src="imgs/iconos/1.jpeg" alt="PFP" />
+          </div>
+        </div>
+        <div class="profile-header__info">
+          <h1 class="profile-header__name" id="userName">
+            [Nombre y Apellido]
+          </h1>
+          <p class="profile-header__cuil" id="userCuil">
+            CUIL: [20-00000000-0]
+          </p>
+          <p class="profile-header__status">Identidad validada</p>
+        </div>
+      </section>
+
+      <!-- Options List -->
+      <nav class="menu-list">
+        <a href="perfil.html" class="menu-list__item">
+          <svg class="menu-list__icon" viewBox="0 0 24 24">
+            <path
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+            />
+          </svg>
+          <span>Mi perfil</span>
+        </a>
+        <a href="#" class="menu-list__item">
+          <svg class="menu-list__icon" viewBox="0 0 24 24">
+            <path
+              d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"
+            />
+          </svg>
+          <span>Hijos/as asociados</span>
+        </a>
+        <a href="#" class="menu-list__item">
+          <svg class="menu-list__icon" viewBox="0 0 24 24">
+            <path
+              d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14zm-4-6h-2v-2H9v-2h2V7h2v2h2v2h-2z"
+            />
+          </svg>
+          <span>Suscribir servicios</span>
+        </a>
+
+        <div class="menu-list__divider"></div>
+
+        <a href="#" class="menu-list__item">
+          <svg class="menu-list__icon" viewBox="0 0 24 24">
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+            />
+          </svg>
+          <span>Seguridad y privacidad</span>
+        </a>
+
+        <div class="menu-list__divider"></div>
+
+        <a href="#" class="menu-list__item">
+          <span class="menu-list__text-icon">mi</span>
+          <span>Acerca de</span>
+        </a>
+        <a href="#" class="menu-list__item">
+          <svg class="menu-list__icon" viewBox="0 0 24 24">
+            <path
+              d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+            />
+          </svg>
+          <span>Términos y condiciones</span>
+        </a>
+
+        <div class="menu-list__divider"></div>
+
+        <a href="#" class="menu-list__item">
+          <svg class="menu-list__icon" viewBox="0 0 24 24">
+            <path
+              d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+            />
+          </svg>
+          <span>Cerrar sesión</span>
+        </a>
+        <a href="index.html" class="menu-list__item" data-transition="reverse">
+          <img src="icons/volveralinicio.png" alt="volverinicio" class="menu-list__icon"/>
+          <span>Volver al inicio</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      <a class="bottom-nav__item" href="index.html">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" data-transition="reverse">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </svg>
+        <span>Inicio</span>
+      </a>
+      <a class="bottom-nav__item" href="novedades.html">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path
+            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+          />
+        </svg>
+        <span>Novedades</span>
+      </a>
+      <a class="bottom-nav__item" href="telefonos.html">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+          />
+        </svg>
+        <span>Teléfonos</span>
+      </a>
+      <a class="bottom-nav__item" href="https://wa.link/cnz93b">
+        <img src="icons/tina.png" alt="Tina" width="22" height="22" />
+        <span>Tina</span>
+      </a>
+    </nav>
+  </body>
+</html>

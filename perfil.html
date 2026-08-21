@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Perfil - miArgentina</title>
+    <link rel="stylesheet" href="perfil.css" />
+    <script src="datos.js"></script>
+    <script src="datos1.js"></script>
+  </head>
+  <body class="ProfilePage">
+    <!-- Sticky Header -->
+    <header class="TopHeader">
+      <a href="index.html" class="TopHeader_back" aria-label="Volver">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="#ffffff">
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          />
+        </svg>
+      </a>
+      <h1 class="TopHeader_title">Mi perfil</h1>
+    </header>
+
+    <!-- Scrollable Blue Hero Banner -->
+    <div class="ProfileHero">
+      <div class="ProfileUser">
+        <div class="ProfileUser_avatar">
+          <img src="icons/perfil.jpg" alt="perfil" />
+        </div>
+
+        <div class="ProfileUser_nameRow">
+          <h2 class="ProfileUser_name" id="userName">--</h2>
+          <span class="ProfileUser_checkBadge">✓</span>
+        </div>
+        <p class="ProfileUser_cuil"><span id="userCuil">--</span></p>
+        <p class="ProfileUser_status" id="profileStatus">Identidad validada</p>
+      </div>
+    </div>
+
+    <!-- Content Cards Container -->
+    <main class="ProfileContent">
+      <!-- Section 1: Mis datos personales -->
+      <section class="ProfileSection">
+        <h3 class="ProfileSection_title">Mis datos personales</h3>
+        <div class="ProfileCard">
+          <div class="ProfileField">
+            <div class="ProfileField_info">
+              <span class="ProfileField_label">Correo electrónico</span>
+              <span class="ProfileField_value">--@gmail.com</span>
+            </div>
+            <button class="ProfileField_editBtn" aria-label="Editar correo">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#372fc2">
+                <path
+                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="ProfileCard_divider"></div>
+
+          <div class="ProfileField">
+            <div class="ProfileField_info">
+              <div class="ProfileField_labelRow">
+                <span class="ProfileField_label">Teléfono celular</span>
+                <span class="ProfileBadge ProfileBadge--verified"
+                  >✓ Verificado</span
+                >
+              </div>
+              <span class="ProfileField_value">+54-11-________</span>
+            </div>
+            <button class="ProfileField_editBtn" aria-label="Editar teléfono">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#372fc2">
+                <path
+                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Domicilio actual -->
+      <section class="ProfileSection">
+        <h3 class="ProfileSection_title">Domicilio actual</h3>
+        <div class="ProfileCard ProfileCard--row">
+          <div class="ProfileAddress">
+            <p class="ProfileAddress_line" id="profileStreet">--</p>
+            <p class="ProfileAddress_sub" id="profileCity">Ciudad Autónoma de Buenos Aires, Ciudad Autonoma de Buenos Aires, (1426) Argentina</p>
+          </div>
+          <button class="ProfileField_editBtn" aria-label="Editar domicilio">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="#372fc2">
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Section 3: Tus datos Grid -->
+      <section class="ProfileSection">
+        <h3 class="ProfileSection_title">Tus datos</h3>
+        <div class="ProfileCard">
+          <div class="ProfileGrid">
+            <div class="ProfileGrid_item">
+              <span class="ProfileField_label">Nombre</span>
+              <span class="ProfileField_value" id="profileFirstName">--</span>
+            </div>
+            <div class="ProfileGrid_item">
+              <span class="ProfileField_label">Apellido</span>
+              <span class="ProfileField_value" id="profileLastName">--</span>
+            </div>
+            <div class="ProfileGrid_item">
+              <span class="ProfileField_label">DNI</span>
+              <span class="ProfileField_value" id="profileDni">--</span>
+            </div>
+            <div class="ProfileGrid_item">
+              <span class="ProfileField_label">Sexo</span>
+              <span class="ProfileField_value" id="profileGender">--</span>
+            </div>
+            <div class="ProfileGrid_item">
+              <span class="ProfileField_label">Fecha de nacimiento</span>
+              <span class="ProfileField_value" id="profileBirthDate">--</span>
+            </div>
+            <div class="ProfileGrid_item">
+              <span class="ProfileField_label">Nacionalidad</span>
+              <span class="ProfileField_value" id="profileNationality">Argentina</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="BottomNav">
+      <a class="BottomNav_item BottomNav_item--active" href="index.html">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </svg>
+        <span>Inicio</span>
+      </a>
+      <a class="BottomNav_item" href="novedades.html">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+          <path
+            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+          />
+        </svg>
+        <span>Novedades</span>
+      </a>
+      <a class="BottomNav_item" href="telefonos.html">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+          />
+        </svg>
+        <span>Teléfonos</span>
+      </a>
+      <a class="BottomNav_item" href="https://wa.link/cnz93b">
+        <img src="icons/tina.png" alt="Tina" width="26" height="26" />
+        <span>Tina</span>
+      </a>
+    </nav>
+
+  </body>
+</html>
