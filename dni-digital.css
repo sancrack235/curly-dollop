@@ -1407,7 +1407,7 @@ body {
 .DNI_contentBtnContainer {
     border-bottom: 1px solid #aeaeae;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
     gap: 0px;
     width: 100%;
     padding: 8px 0;

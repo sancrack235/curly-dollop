@@ -2990,3 +2990,9 @@ body {
 .BottomNav_item--active > svg {
   fill: var(--primary-color);
 }
+
+/* ZOOM */
+
+.main {
+  zoom: 115%;
+}
